@@ -21,11 +21,11 @@ app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
 
 // connect to db
-
-mongoose.connect(process.env.MONGO_URI)
+const dburi='mongodb+srv://kobenkhaoua:takeiteasy@mernapp.gxh9rto.mongodb.net/?retryWrites=true&w=majority&appName=Mernapp';
+mongoose.connect(dburi)
   .then(() => {
     // listen for requests
-    app.listen(process.env.PORT, () => {
+    app.listen(4000, () => {
       console.log('connected to db & listening on port', process.env.PORT)
     })
   })
