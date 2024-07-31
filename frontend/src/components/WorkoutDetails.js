@@ -13,7 +13,7 @@ const WorkoutDetails = ({ workout }) => {
       return
     }
 
-    const response = await fetch('https://workout-buddy-i7tb.onrender.com/api/workouts/' + workout._id, {
+    const response = await fetch('/api/workouts/' + workout._id, {
       method: 'DELETE',
       headers: {
         'Authorization': `Bearer ${user.token}`
